@@ -21,7 +21,7 @@ class ListNode(object):
     self.next = None
 
 class Solution:
-   def addtwonumbers_bn(self, l1, l2, c = 0):
+   def add_two_numbers_bn(self, l1, l2, c = 0):
     x1 = int(str(l1.next.next.val) + str(l1.next.val) + str(l1.val))
     x2 = int(str(l2.next.next.val) + str(l2.next.val) + str(l2.val))
     x3 = str(x1 + x2)
@@ -30,8 +30,7 @@ class Solution:
     l3.next = ListNode(x3[1])
     l3.next.next = ListNode(x3[0])
 
-    #print(l3.val, l3.next.val, l3.next.next.val)
-    print(l3)
+    return l3 #print(l3.val, l3.next.val, l3.next.next.val)
 
   def addTwoNumbersSolution(self,l1,l2):
     return self.addTwoNumbersRecursive(11, 12, 0)
@@ -81,7 +80,7 @@ l2 = ListNode(5)
 l2.next = ListNode(6)
 l2.next.next = ListNode(4)
 
-# result = Solution().addtwonumbers_bn(l1, l2)
+# result = Solution().add_two_numbers_bn(l1, l2)
 result = Solution().addTwoNumbers(l1, l2)
 while result:
   print(result.val),
